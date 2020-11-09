@@ -1,0 +1,10 @@
+<h1>GAMES BLOG INDEX PAGE!</h1>
+
+
+<% games.forEach(game => { %>
+    <h1><%= game.title %></h1>
+    <img style="width: 400px" src="<%= game.screenshot %>">
+    <p style="width: 500px"><%= game.review %></p>
+    <p><%= game.author %></p>
+    <p><%= "Dodano: " + game.created.toLocaleDateString() + " o godzinie " + game.created.toLocaleTimeString() %></p>
+<% }); %>
