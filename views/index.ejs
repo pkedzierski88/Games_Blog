@@ -1,10 +1,55 @@
-<h1>GAMES BLOG INDEX PAGE!</h1>
+<%- include("partials/header.ejs"); %>
 
+<section class="jumbotron mb-0 text-center">
+  <h1>Welcome to my Games Blog!</h1>
+</section>
+<!-- 
+<div class="album">
+    <div class="container">
+        <div class="row">
+            <% games.forEach(game => { %>
+                <div class="card col-md-4">
+                    <img style="max-height: 250px;" src="<%= game.screenshot %>">
+                    <div class="card-body">
+                        <h4><%= game.title %></h1>
+                        <p><%= game.review.substring(0, 170) + "..." %></p>
+                        <p><%= game.author %></p>
+                        <p><%= "Dodano: " + game.created.toLocaleDateString() + " o godzinie " + game.created.toLocaleTimeString() %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div> -->
 
-<% games.forEach(game => { %>
-    <h1><%= game.title %></h1>
-    <img style="width: 400px" src="<%= game.screenshot %>">
-    <p style="width: 500px"><%= game.review %></p>
-    <p><%= game.author %></p>
-    <p><%= "Dodano: " + game.created.toLocaleDateString() + " o godzinie " + game.created.toLocaleTimeString() %></p>
-<% }); %>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <% games.forEach(game => { %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img style="max-height: 250px" src="<%= game.screenshot %>" />
+          <div class="card-body">
+            <p class="card-text">
+              <%= game.review.substring(0, 170) + "..." %>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs"); %>
