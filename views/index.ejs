@@ -1,5 +1,45 @@
 <%- include("partials/header.ejs"); %>
 
+<!-- <nav class="navbar bg-dark navbar-dark">
+  <div class="container">
+      <a href="" class="navbar-brand"><i class="fas fa-binoculars mr-2"></i>Pattern</a>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Home</a>
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">New Post<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Your Account</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown07">
+            <a class="dropdown-item" href="#">Sing Up</a>
+            <a class="dropdown-item" href="#">Login</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <section class="jumbotron mb-0 text-center">
   <h1>Welcome to my Games Blog!</h1>
 </section>
@@ -8,7 +48,7 @@
   <div class="container">
     <div class="row">
       <% games.forEach(game => { %>
-      <div class="col-md-4">
+      <div class="col-md-6 col-lg-4">
         <div class="card mb-4 shadow-sm">
           <img src="<%= game.screenshot %>" />
           <div class="card-body">
@@ -19,7 +59,7 @@
               </div>
               <div id="postCreation">
                 <small class="text-muted">
-                  created <%= game.created.toLocaleDateString() %> at <%=game.created.getHours() + ":" + game.created.getMinutes() %>
+                  added <%= game.created.toLocaleDateString() %> at <%=game.created.getHours() + ":" + game.created.getMinutes() %>
                 </small>
                 <small class="text-muted">by <%= game.author %></small>
               </div>
