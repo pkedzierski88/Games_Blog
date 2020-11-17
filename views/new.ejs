@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <h1>Create New Post</h1>
+    </div>
+    <div class="row">
+        <div id="newForm">
+            <form action="/games" method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input id="test1" class="form-control" type="text" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label>Screenshot</label>
+                    <input class="form-control" type="text" name="screenshot" placeholder="Screenshot URL">
+                </div>
+                <div class="form-group">
+                    <label>Review</label>
+                    <textarea class="form-control" name="review" placeholder="Write something here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input class="form-control" type="text" name="author" placeholder="Author">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+                <a href="/games" id="goBackLink">Go Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

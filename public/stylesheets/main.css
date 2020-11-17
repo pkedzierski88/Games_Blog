@@ -2,12 +2,26 @@ small {
     display:  block;
 }
 
+textarea {
+    min-height: 15em;
+}
+
+label {
+    font-weight: 500;
+}
+
 div.card > img {
     max-height: 12em;
+    min-height: 12em;
+}
+
+div.card-body > h5 {
+    min-height: 50px;
 }
 
 div.container > img {
-    max-width: 35rem;
+    max-width: 28em;
+    min-width: 28em;
     border-radius: 2%;
 }
 
@@ -18,4 +32,14 @@ div.container > img {
 
 #postCreation {
     text-align: center;
+}
+
+#newForm {
+    width: 50%;
+    margin: auto auto;
+    padding-top: 1em;
+}
+
+#goBackLink {
+    float: right;
 }
