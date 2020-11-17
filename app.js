@@ -21,10 +21,10 @@ mongoose
   .catch((err) => console.log(err.message));
 
 // Game.create({
-//     title: "Another Zelda",
+//     title: "SHORT ZELDA",
 //     screenshot: "https://www.nintendo.com/content/dam/noa/en_US/games/switch/t/the-legend-of-zelda-breath-of-the-wild-switch/the-legend-of-zelda-breath-of-the-wild-switch-hero.jpg",
-//     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate sit amet odio ac interdum. In eget dictum diam, ut ornare sem. Nunc augue orci, fringilla nec tristique a, aliquam eu arcu. Nulla id sem lectus. Maecenas mattis tincidunt urna, in pretium elit congue vel. Sed sollicitudin pulvinar odio, at hendrerit ligula finibus a. Aliquam nibh odio, suscipit a vestibulum commodo, placerat in metus. Nullam interdum lacus eget erat imperdiet pellentesque. Sed enim libero, posuere non pellentesque et, lacinia sed lacus. Nunc suscipit lectus ut diam lacinia malesuada. Vestibulum at sodales nisi. Curabitur varius luctus lectus quis aliquet. Praesent felis turpis, pulvinar vel convallis eu, blandit at nisi. Nam bibendum dignissim congue.",
-//     author: "Piotr Kedzierski"
+//     review: "Lorem ipsum",
+//     author: "Julita Kedzierska"
 // }, (err, createdGame) => {
 //     if(err){
 //         console.log(err);

@@ -1,6 +1,15 @@
-<%- include("partials/header.ejs"); %>
+<%- include("partials/header.ejs") %>
 
-<h1><%= game.title %></h1>
-<p><%= game.review %></p>
 
-<%- include("partials/footer.ejs"); %>
+<div class="container pt-5">
+    <div class="container pb-5 text-center">
+        <img id="zdjecie" src="<%= game.screenshot %>">
+    </div>
+    <h2><%= game.title %></h2>
+    <p><%= game.created.toLocaleDateString() %>,  <%=game.created.getHours() %>:<%= game.created.getMinutes() %>, <%= game.author %></p>
+    <hr>
+    <p><%= game.review %></p>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

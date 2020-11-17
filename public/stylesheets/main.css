@@ -2,10 +2,19 @@ small {
     display:  block;
 }
 
-div.card img {
+div.card > img {
     max-height: 12em;
 }
 
+div.container > img {
+    max-width: 35rem;
+    border-radius: 2%;
+}
+
+.card-text {
+    min-height: 8em;
+    max-height: 8em;
+}
 
 #postCreation {
     text-align: center;
