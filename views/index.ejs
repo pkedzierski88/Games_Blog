@@ -20,7 +20,8 @@
               </div>
               <div id="postCreation">
                 <small class="text-muted">
-                  added <%= game.created.toLocaleDateString() %> at <%=game.created.getHours() + ":" + game.created.getMinutes() %>
+                  <!-- added <%= game.created.toLocaleDateString() %> at <%=game.created.getHours() + ":" + game.created.getMinutes() %> -->
+                  added <%= game.created.toLocaleDateString() %> at <%= game.created.toTimeString().substr(0,5) %>
                 </small>
                 <small class="text-muted">by <%= game.author %></small>
               </div>

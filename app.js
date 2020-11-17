@@ -16,22 +16,11 @@ mongoose
   .connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
   })
   .then(() => console.log("Connected to Game Blog database server"))
   .catch((err) => console.log(err.message));
 
-// Game.create({
-//     title: "SHORT ZELDA",
-//     screenshot: "https://www.nintendo.com/content/dam/noa/en_US/games/switch/t/the-legend-of-zelda-breath-of-the-wild-switch/the-legend-of-zelda-breath-of-the-wild-switch-hero.jpg",
-//     review: "Lorem ipsum",
-//     author: "Julita Kedzierska"
-// }, (err, createdGame) => {
-//     if(err){
-//         console.log(err);
-//     } else {
-//         console.log(createdGame);
-//     }
-// });
 
 //LANDING
 app.get("/", (req, res) => {
@@ -76,6 +65,17 @@ app.get("/games/:id", (req, res) => {
   });
 });
 
+//DELETE
+app.delete("/games/:id", (req, res) => {
+  Game.findByIdAndRemove(req.params.id, (err) => {
+    if(err){
+      console.log(err);
+      res.redirect("/games");
+    } else {
+      res.redirect("/games");
+    }
+  });
+});
 
 app.listen(port, () => {
   console.log("Server is listening on port " + port);
