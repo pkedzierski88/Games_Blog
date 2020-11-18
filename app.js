@@ -24,7 +24,7 @@ mongoose
 
 //LANDING
 app.get("/", (req, res) => {
-  res.redirect("/games");
+  res.render("landing.ejs");
 });
 
 //INDEX
