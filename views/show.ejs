@@ -4,14 +4,21 @@
     <div class="container pb-5 text-center">
         <img src="<%= game.screenshot %>">
     </div>
-    <h2><%= game.title %></h2>
-    <p><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author %></p>
-    <hr>
-    <p><%= game.review %></p>
-    <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-danger float-left">Delete</button>
-    </form>
-    <a href="/games" id="goBackLink"><button class="btn btn-outline-secondary">Go Back</button></a>
+    <div id="gameReviewBody">
+        <div>
+            <h2><%= game.title %></h2>
+            <p><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author %></p>
+            <hr>
+            <p><%= game.review %></p>
+        </div>
+        <div class="pt-3">
+            <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
+            <form class="inlineButton" action="/games/<%= game._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+            <a href="/games" id="goBackLink"><button class="btn btn-outline-secondary">Go Back</button></a>
+        </div>
+    </div>
 </div>
 
 <%- include("partials/footer.ejs") %>

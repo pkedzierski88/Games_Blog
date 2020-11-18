@@ -32,6 +32,7 @@ app.get("/games", (req, res) => {
   Game.find({}, (err, allGames) => {
     if (err) {
       console.log(err);
+      res.redirect("landing.ejs");
     } else {
       res.render("index.ejs", { games: allGames });
     }
@@ -47,8 +48,11 @@ app.get("/games/new", (req, res) => {
 app.post("/games", (req, res) => {
   Game.create(req.body, (err, newGame) => {
     if(err){
+      console.log(err);
       res.render("new.ejs");
     } else {
+      console.log("New Post Added:");
+      console.log(newGame);
       res.redirect("/games");
     }
   });
@@ -58,9 +62,34 @@ app.post("/games", (req, res) => {
 app.get("/games/:id", (req, res) => {
   Game.findById(req.params.id, (err, foundGame) => {
     if(err){
+      console.log(err);
       res.redirect("back");
     } else {
       res.render("show.ejs", {game: foundGame});
+    }
+  });
+});
+
+//EDIT
+app.get("/games/:id/edit", (req, res) => {
+  Game.findById(req.params.id, (err, foundGame) => {
+    if(err){
+      console.log(err);
+      res.redirect("/games");
+    } else {
+      res.render("edit.ejs", {game: foundGame});
+    }
+  });
+});
+
+//UPDATE
+app.put("/games/:id", (req, res) => {
+    Game.findByIdAndUpdate(req.params.id, req.body, (err, updatedGame) => {
+    if(err){
+      console.log(err);
+      res.redirect("/games");
+    } else {
+      res.redirect("/games/" + req.params.id)
     }
   });
 });

@@ -10,6 +10,11 @@ label {
     font-weight: 500;
 }
 
+section.jumbotron h1 {
+    display: inline;
+    font-weight: 700;
+}
+
 div.card > img {
     max-height: 12em;
     min-height: 12em;
@@ -25,22 +30,48 @@ div.container > img {
     border-radius: 2%;
 }
 
+.inlineButton {
+    display: inline;
+}
+
 .card-text {
     min-height: 8em;
     max-height: 8em;
+}
+
+.fa-home {
+    font-size: 1.7em; 
+    margin-right: 20px;
+}
+
+.navIcon {
+    font-size: 1.5em;
+    margin-right: 12px;
+    margin-left: 5px;
+}
+
+.fa-gamepad {
+    font-size: 5em; 
+    margin-right: 20px;
 }
 
 #postCreation {
     text-align: center;
 }
 
-#newForm {
+#newEditForm {
     width: 50%;
     margin: auto auto;
     padding-top: 1em;
+}
+
+#gameReviewBody {
+    margin-left: 8%; 
+    margin-right: 8%;
 }
 
 #goBackLink {
     float: right;
     margin-bottom: 10%;
 }
+
