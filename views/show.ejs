@@ -11,7 +11,7 @@
             <hr>
             <p><%= game.review %></p>
         </div>
-        <div class="pt-3">
+        <div id="bottomButtons" class="pt-3">
             <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
             <form class="inlineButton" action="/games/<%= game._id %>?_method=DELETE" method="POST">
                 <button class="btn btn-danger">Delete</button>
