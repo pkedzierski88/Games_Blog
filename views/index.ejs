@@ -14,15 +14,14 @@
         <div class="card mb-4 shadow-sm">
           <img src="<%= game.screenshot %>" />
           <div class="card-body">
-            <h5><%= game.title %></h5>
-            <p class="card-text"><%= game.review.substring(0, 170) + "..." %></p>
+            <h5 class="textCenter"><%= game.title %></h5>
+            <p class="card-text justify"><%= game.review.substring(0, 170) + "..." %></p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <a href="/games/<%= game._id %>"><button type="button" class="btn btn-sm btn-outline-secondary">Read More</button></a>
               </div>
-              <div id="postCreation">
+              <div class="textCenter">
                 <small class="text-muted">
-                  <!-- added <%= game.created.toLocaleDateString() %> at <%=game.created.getHours() + ":" + game.created.getMinutes() %> -->
                   added <%= game.created.toLocaleDateString() %> at <%= game.created.toTimeString().substr(0,5) %>
                 </small>
                 <small class="text-muted">by <%= game.author %></small>

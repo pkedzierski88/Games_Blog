@@ -1,15 +1,15 @@
 <%- include("partials/header.ejs") %>
 
 <div class="container pt-5">
-    <div class="container pb-5 text-center">
-        <img src="<%= game.screenshot %>">
+    <div class="imgbox">
+        <img class="center-fit" src='<%= game.screenshot %>'>
     </div>
     <div id="gameReviewBody">
         <div>
-            <h2><%= game.title %></h2>
-            <p><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author %></p>
+            <h2 class="textCenter"><%= game.title %></h2>
+            <p class="textCenter"><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author %></p>
             <hr>
-            <p><%= game.review %></p>
+            <p class="justify"><%= game.review %></p>
         </div>
         <div id="bottomButtons" class="pt-3">
             <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
