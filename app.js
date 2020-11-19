@@ -5,7 +5,7 @@ const methodOverride = require("method-override"),
   express = require("express"),
   app = express(),
   port = process.env.PORT || 3000,
-  url = process.env.DATABASEURL || "mongodb://localhost:27017/game_blog_db";
+  url = process.env.DATABASEURL || "mongodb://localhost:27017/game_blog_db" || "mongodb+srv://piotrek:<password2020>@games0.cbxab.mongodb.net/<games_blog_db_deployed>?retryWrites=true&w=majority";
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
