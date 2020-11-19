@@ -3,18 +3,18 @@ html {
 }
 
 body {
-	background: url(/images/controller.jpg);
+	background: url(/images/deer.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 h1 {
-	font-weight: 600;
-	font-size: 4em;
+	font-weight: 700;
+	font-size: 3.3em;
 }
 
 h3 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 hr {
@@ -24,6 +24,7 @@ hr {
 
 #landingContent {
 	text-align: center;
-    padding-top: 12%;
+	padding-top: 20%;
+	text-shadow: 0px 0px 15px #b2c2bf
  }
 
