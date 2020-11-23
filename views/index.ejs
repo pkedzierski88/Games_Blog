@@ -10,9 +10,9 @@
   <div class="container">
     <div class="row mx-auto">
       <% games.reverse().forEach(game => { %>
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-xl-4">
         <div class="card mb-4 shadow-sm">
-          <img src="<%= game.screenshot %>" />
+          <img src="<%= game.screenshot %>">
           <div class="card-body">
             <h5 class="textCenter"><%= game.title %></h5>
             <p class="card-text justify"><%= game.review.substring(0, 170) + "..." %></p>
