@@ -7,15 +7,19 @@
     <div id="gameReviewBody">
         <div>
             <h2 class="textCenter"><%= game.title %></h2>
-            <p class="textCenter"><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author %></p>
+            <p class="textCenter"><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author.username %></p>
             <hr>
             <p class="justify"><%= game.review %></p>
+            <hr>
         </div>
+      
         <div id="bottomButtons" class="pt-3">
-            <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
-            <form class="inlineButton" action="/games/<%= game._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-danger">Delete</button>
-            </form>
+            <% if(currentUser && game.author.id.equals(currentUser._id)) { %>
+                <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
+                <form class="inlineButton" action="/games/<%= game._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                <% } %>
             <a href="/games" id="goBackLink"><button class="btn btn-outline-secondary">Go Back</button></a>
         </div>
     </div>

@@ -31,9 +31,7 @@ router.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
-router.post(
-  "/login",
-  passport.authenticate("local", {
+router.post("/login", passport.authenticate("local", {
     successRedirect: "/games",
     failureRedirect: "/login",
   }),

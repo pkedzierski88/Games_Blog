@@ -21,14 +21,24 @@ router.get("/games/new", middleware.isLoggedIn, (req, res) => {
 });
 
 //CREATE
-router.post("/games", (req, res) => {
-  Game.create(req.body, (err, newGame) => {
+router.post("/games", middleware.isLoggedIn, (req, res) => {
+  let title = req.body.title;
+  let screenshot = req.body.screenshot;
+  let review = req.body.review;
+  let author = { id: req.user._id, username: req.user.username };
+  let newGame = {
+    title: title,
+    screenshot: screenshot,
+    review: review,
+    author: author,
+  };
+  Game.create(newGame, (err, gamePost) => {
     if (err) {
       console.log(err);
       res.render("new.ejs");
     } else {
       console.log("New Post Added:");
-      console.log(newGame);
+      console.log(gamePost);
       res.redirect("/games");
     }
   });
@@ -47,7 +57,7 @@ router.get("/games/:id", (req, res) => {
 });
 
 //EDIT
-router.get("/games/:id/edit", middleware.isLoggedIn, (req, res) => {
+router.get("/games/:id/edit", middleware.checkPostOwner, (req, res) => {
   Game.findById(req.params.id, (err, foundGame) => {
     if (err) {
       console.log(err);
@@ -59,7 +69,7 @@ router.get("/games/:id/edit", middleware.isLoggedIn, (req, res) => {
 });
 
 //UPDATE
-router.put("/games/:id", (req, res) => {
+router.put("/games/:id", middleware.checkPostOwner, (req, res) => {
   Game.findByIdAndUpdate(req.params.id, req.body, (err, updatedGame) => {
     if (err) {
       console.log(err);
@@ -71,7 +81,7 @@ router.put("/games/:id", (req, res) => {
 });
 
 //DELETE
-router.delete("/games/:id", (req, res) => {
+router.delete("/games/:id", middleware.checkPostOwner, (req, res) => {
   Game.findByIdAndRemove(req.params.id, (err) => {
     if (err) {
       console.log(err);
