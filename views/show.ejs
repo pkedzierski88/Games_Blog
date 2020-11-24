@@ -9,7 +9,8 @@
             <h2 class="textCenter"><%= game.title %></h2>
             <p class="textCenter"><%= game.created.toLocaleDateString() %>,  <%=game.created.toTimeString().substr(0,5) %>, <%= game.author.username %></p>
             <hr>
-            <p class="justify"><%= game.review %></p>
+            <!-- SHOWS HTML TAGS!!! -->
+            <p class="justify"><%- game.review %></p>
             <hr>
         </div>
       
