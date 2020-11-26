@@ -6,13 +6,13 @@
   </div>
 </section>
 
-<div class="album py-5 bg-light">
+<div class="album pt-4 pb-5 bg-light">
   <div class="container">
     <div class="row mx-auto">
       <% games.reverse().forEach(game => { %>
       <div class="col-md-6 col-xl-4">
-        <div class="card mb-4 shadow-sm">
-          <img src="<%= game.screenshot %>">
+        <div class="card mb-4 shadow-lg">
+          <img class="" src="<%= game.screenshot %>">
           <div class="card-body">
             <h5 class="textCenter"><%= game.title %></h5>
             <!-- Strip text from HTML tags -->

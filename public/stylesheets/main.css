@@ -1,100 +1,119 @@
+body {
+  color: rgb(20, 20, 20);
+  background-color: #f8f9fa;
+}
 small {
-    display:  block;
+  display: block;
 }
 
 textarea {
-    min-height: 15em;
+  min-height: 15em;
 }
 
 label {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 section.jumbotron h1 {
-    display: inline;
-    font-weight: 700;
-    text-align: center;
+  display: inline;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card {
+  border-radius: 2%;
 }
 
 div.card > img {
-    max-height: 12em;
-    min-height: 12em;
+  border-radius: 2%;
+  max-height: 12em;
+  min-height: 12em;
 }
 
 div.card-body > h5 {
-    min-height: 50px;
+  min-height: 50px;
 }
 
 div.container > img {
-    max-width: 50em;
-    /* min-width: auto; */
-    border-radius: 2%;
+  max-width: 50em;
+  border-radius: 2%;
+}
+
+.navbar,
+.footer {
+  background-color: rgb(20, 20, 20);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-brand,
+footer span {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .imgbox {
-    display: grid;
-    height: 100%;
-    margin-left: 7%;
-    margin-right: 7%;
+  display: grid;
+  height: 100%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 .center-fit {
-    max-width: 100%;
-    max-height: 400px;
-    margin: auto;
-    border-radius: 2%;
-    margin-bottom: 5%;
+  max-width: 100%;
+  max-height: 400px;
+  margin: auto;
+  border-radius: 2%;
+  margin-bottom: 5%;
 }
 
 .inlineButton {
-    display: inline;
+  display: inline;
 }
 
 .card-text {
-    min-height: 8em;
-    max-height: 8em;
+  min-height: 8em;
+  max-height: 8em;
 }
 
 .fa-home {
-    font-size: 1.7em; 
-    margin-right: 20px;
+  font-size: 1.7em;
+  margin-right: 20px;
 }
 
 .navIcon {
-    font-size: 1.5em;
-    margin-right: 12px;
-    margin-left: 5px;
+  font-size: 1.5em;
+  margin-right: 12px;
+  margin-left: 5px;
 }
 
 .fa-gamepad {
-    font-size: 5em; 
-    margin-right: 20px;
+  font-size: 5em;
+  margin-right: 20px;
 }
 
 .textCenter {
-    text-align: center;
+  text-align: center;
 }
 
 .justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 #newEditForm {
-    width: 70%;
-    margin: auto auto;
-    padding-top: 1em;
-    margin-bottom: 10%;
+  width: 70%;
+  margin: auto auto;
+  padding-top: 1em;
+  margin-bottom: 10%;
 }
 
 #gameReviewBody {
-    margin-left: 8%; 
-    margin-right: 8%;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 #goBackLink {
-    float: right;
-    margin-bottom: 10%;
+  float: right;
+  margin-bottom: 10%;
 }
 
 #bottomButtons {
-    margin-bottom: 17%;
+  margin-bottom: 17%;
 }
