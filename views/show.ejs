@@ -16,12 +16,12 @@
       
         <div id="bottomButtons" class="pt-3">
             <% if(currentUser && game.author.id.equals(currentUser._id)) { %>
-                <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edit</button></a>
+                <a href="/games/<%= game._id %>/edit"><button class="btn btn-primary">Edytuj</button></a>
                 <form class="inlineButton" action="/games/<%= game._id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger">Usuń</button>
                 </form>
                 <% } %>
-            <a href="/games" id="goBackLink"><button class="btn btn-outline-secondary">Go Back</button></a>
+            <a href="/games" id="goBackLink"><button class="btn btn-outline-secondary">Powrót</button></a>
         </div>
     </div>
 </div>

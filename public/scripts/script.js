@@ -13,9 +13,3 @@ $(".summernote").summernote({
       ['view', ['fullscreen', 'codeview', 'help']],
     ]
   }); 
-
-$("#summernotePhoto").summernote({
-  toolbar: [
-    ['insert', ['picture']]
-  ]
-});
