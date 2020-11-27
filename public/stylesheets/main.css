@@ -4,14 +4,13 @@ body {
 }
 
 h5 {
- font-weight: 700;
+  font-weight: 700;
 }
 
 small {
   display: block;
   font-weight: 500;
 }
-
 
 textarea {
   min-height: 15em;
@@ -63,10 +62,10 @@ footer span {
 
 .imgbox {
   display: grid;
-  height: 100%;
   margin-left: 7%;
   margin-right: 7%;
 }
+
 .center-fit {
   max-width: 100%;
   max-height: 400px;
@@ -126,5 +125,5 @@ footer span {
 }
 
 #bottomButtons {
-  margin-bottom: 17%;
+  margin-bottom: 10%;
 }
