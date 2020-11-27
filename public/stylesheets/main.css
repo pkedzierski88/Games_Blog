@@ -111,7 +111,7 @@ footer span {
   width: 70%;
   margin: auto auto;
   padding-top: 1em;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 #gameReviewBody {
